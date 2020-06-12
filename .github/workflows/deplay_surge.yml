@@ -24,11 +24,8 @@ jobs:
       uses: actions/setup-node@v2-beta  
       with: 
       node-version: 12
-    - name: Deploy to foo-bar.surge.sh
-        uses: dswistowski/surge-sh-action@v1
-        with:
-          domain: 'asimwork001.surge.sh/'
-          project: '.'
-          login: ${{ secrets.surge_login }}
-          token: ${{ secrets.surge_token }}
+     -name: install surge
+      - run: npm install -g surge
+        -name: run surge
+         run: surge./asimwork001.surge.sh--token${{secret.surge_token}}
        
