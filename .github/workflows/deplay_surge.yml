@@ -25,7 +25,7 @@ jobs:
       with: 
       node-version: 12
     -name: install surge
-     run: npm install -g surge
+     run: npm install --globally surge
       -name: run surge
          run: surge./http://asimwork001.surge.sh--token${{secret.surge_token}}
        
