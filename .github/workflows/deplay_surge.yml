@@ -24,8 +24,8 @@ jobs:
       uses: actions/setup-node@v2-beta  
       with: 
       node-version: 12
-    -  name: install surge
+    -name: install surge
      run: npm install -g surge
-      name: run surge
+      -name: run surge
          run: surge./http://asimwork001.surge.sh--token${{secret.surge_token}}
        
