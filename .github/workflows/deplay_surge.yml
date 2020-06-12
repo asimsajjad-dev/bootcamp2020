@@ -22,7 +22,7 @@ jobs:
     - uses: actions/checkout@v2
     # Runs a single command using the runners shell
       uses: actions/setup-node@v2-beta  
-       - name: install surge
+       name: install surge
       - run: npm install -g surge
         - name: run surge
          run: surge./asimwork001.surge.sh--token${{secret.surge_token}}
