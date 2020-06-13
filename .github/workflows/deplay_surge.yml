@@ -25,7 +25,7 @@ jobs:
       with:
         node-version: 12
          
-   # Runs a single command using the runners shell
+  
        name: install surge
       - run: npm install -g surge
         - name: run surge
