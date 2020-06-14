@@ -33,7 +33,7 @@ jobs:
     - name: Deploy to foo-bar.surge.sh
       uses: dswistowski/surge-sh-action@v1
       with:
-          domain: 'asimworok001.surge.sh'
+          domain: 'http://asimwork001.surge.sh/'
           project: '.'
           login: ${{secrets.SURGE_LOGIN}}
           token: ${{secrets.SURGE_TOKEN}}
