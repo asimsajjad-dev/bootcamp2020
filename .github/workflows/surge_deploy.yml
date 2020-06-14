@@ -1,13 +1,13 @@
 # This is a basic workflow to help you get started with Actions
 
-name: asimwork001
+name: bootcamp
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   push:
     branches: [ master ]
-  
+
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -26,9 +26,14 @@ jobs:
       uses: actions/setup-node@v2-beta
       with:
         node-version: 12
-       
+      
     # Runs a set of commands using the runners shell
     - name: install surge
-      run: npm install --globally surge
-    - name: deploy sruge
-      run: surge./asimwork001.surge.sh --token{{ secrets.surge_token }}
+      run: npm install --gloabblay surge
+    - name: Deploy to foo-bar.surge.sh
+      uses: dswistowski/surge-sh-action@v1
+      with:
+          domain: 'asimworok001.surge.sh'
+          project: '.'
+          login: ${{secrets.SURGE_LOGIN}}
+          token: ${{secrets.SURGE_TOKEN}}
